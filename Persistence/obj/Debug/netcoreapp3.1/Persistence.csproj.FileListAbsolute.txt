@@ -1,0 +1,12 @@
+/home/wiliam/Documentos/kardex/Persistence/bin/Debug/netcoreapp3.1/Persistence.deps.json
+/home/wiliam/Documentos/kardex/Persistence/bin/Debug/netcoreapp3.1/Persistence.dll
+/home/wiliam/Documentos/kardex/Persistence/bin/Debug/netcoreapp3.1/Persistence.pdb
+/home/wiliam/Documentos/kardex/Persistence/bin/Debug/netcoreapp3.1/Domain.dll
+/home/wiliam/Documentos/kardex/Persistence/bin/Debug/netcoreapp3.1/Domain.pdb
+/home/wiliam/Documentos/kardex/Persistence/obj/Debug/netcoreapp3.1/Persistence.csprojAssemblyReference.cache
+/home/wiliam/Documentos/kardex/Persistence/obj/Debug/netcoreapp3.1/Persistence.AssemblyInfoInputs.cache
+/home/wiliam/Documentos/kardex/Persistence/obj/Debug/netcoreapp3.1/Persistence.AssemblyInfo.cs
+/home/wiliam/Documentos/kardex/Persistence/obj/Debug/netcoreapp3.1/Persistence.csproj.CoreCompileInputs.cache
+/home/wiliam/Documentos/kardex/Persistence/obj/Debug/netcoreapp3.1/Persistence.csproj.CopyComplete
+/home/wiliam/Documentos/kardex/Persistence/obj/Debug/netcoreapp3.1/Persistence.dll
+/home/wiliam/Documentos/kardex/Persistence/obj/Debug/netcoreapp3.1/Persistence.pdb

@@ -1,0 +1,9 @@
+/home/wiliam/Documentos/kardex/Security/bin/Debug/netcoreapp3.1/Security.deps.json
+/home/wiliam/Documentos/kardex/Security/bin/Debug/netcoreapp3.1/Security.dll
+/home/wiliam/Documentos/kardex/Security/bin/Debug/netcoreapp3.1/Security.pdb
+/home/wiliam/Documentos/kardex/Security/obj/Debug/netcoreapp3.1/Security.csprojAssemblyReference.cache
+/home/wiliam/Documentos/kardex/Security/obj/Debug/netcoreapp3.1/Security.AssemblyInfoInputs.cache
+/home/wiliam/Documentos/kardex/Security/obj/Debug/netcoreapp3.1/Security.AssemblyInfo.cs
+/home/wiliam/Documentos/kardex/Security/obj/Debug/netcoreapp3.1/Security.csproj.CoreCompileInputs.cache
+/home/wiliam/Documentos/kardex/Security/obj/Debug/netcoreapp3.1/Security.dll
+/home/wiliam/Documentos/kardex/Security/obj/Debug/netcoreapp3.1/Security.pdb

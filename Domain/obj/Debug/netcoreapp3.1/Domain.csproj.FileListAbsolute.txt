@@ -1,0 +1,9 @@
+/home/wiliam/Documentos/kardex/Domain/bin/Debug/netcoreapp3.1/Domain.deps.json
+/home/wiliam/Documentos/kardex/Domain/bin/Debug/netcoreapp3.1/Domain.dll
+/home/wiliam/Documentos/kardex/Domain/bin/Debug/netcoreapp3.1/Domain.pdb
+/home/wiliam/Documentos/kardex/Domain/obj/Debug/netcoreapp3.1/Domain.csprojAssemblyReference.cache
+/home/wiliam/Documentos/kardex/Domain/obj/Debug/netcoreapp3.1/Domain.AssemblyInfoInputs.cache
+/home/wiliam/Documentos/kardex/Domain/obj/Debug/netcoreapp3.1/Domain.AssemblyInfo.cs
+/home/wiliam/Documentos/kardex/Domain/obj/Debug/netcoreapp3.1/Domain.csproj.CoreCompileInputs.cache
+/home/wiliam/Documentos/kardex/Domain/obj/Debug/netcoreapp3.1/Domain.dll
+/home/wiliam/Documentos/kardex/Domain/obj/Debug/netcoreapp3.1/Domain.pdb

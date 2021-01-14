@@ -1,0 +1,14 @@
+/home/wiliam/Documentos/kardex/Application/bin/Debug/netcoreapp3.1/Application.deps.json
+/home/wiliam/Documentos/kardex/Application/bin/Debug/netcoreapp3.1/Application.dll
+/home/wiliam/Documentos/kardex/Application/bin/Debug/netcoreapp3.1/Application.pdb
+/home/wiliam/Documentos/kardex/Application/bin/Debug/netcoreapp3.1/Domain.dll
+/home/wiliam/Documentos/kardex/Application/bin/Debug/netcoreapp3.1/Persistence.dll
+/home/wiliam/Documentos/kardex/Application/bin/Debug/netcoreapp3.1/Domain.pdb
+/home/wiliam/Documentos/kardex/Application/bin/Debug/netcoreapp3.1/Persistence.pdb
+/home/wiliam/Documentos/kardex/Application/obj/Debug/netcoreapp3.1/Application.csprojAssemblyReference.cache
+/home/wiliam/Documentos/kardex/Application/obj/Debug/netcoreapp3.1/Application.AssemblyInfoInputs.cache
+/home/wiliam/Documentos/kardex/Application/obj/Debug/netcoreapp3.1/Application.AssemblyInfo.cs
+/home/wiliam/Documentos/kardex/Application/obj/Debug/netcoreapp3.1/Application.csproj.CoreCompileInputs.cache
+/home/wiliam/Documentos/kardex/Application/obj/Debug/netcoreapp3.1/Application.csproj.CopyComplete
+/home/wiliam/Documentos/kardex/Application/obj/Debug/netcoreapp3.1/Application.dll
+/home/wiliam/Documentos/kardex/Application/obj/Debug/netcoreapp3.1/Application.pdb
