@@ -28,12 +28,15 @@ namespace Persistence.Migrations
                     b.Property<string>("Descripcion")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<byte>("Estado")
+                        .HasColumnType("tinyint");
+
                     b.Property<string>("NombreCategoria")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("CategoriaId");
 
-                    b.ToTable("Categoria");
+                    b.ToTable("Categorias");
                 });
 
             modelBuilder.Entity("Domain.Entities.Cliente", b =>
@@ -205,8 +208,8 @@ namespace Persistence.Migrations
                     b.Property<string>("Descripcion")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Estado")
-                        .HasColumnType("int");
+                    b.Property<byte>("Estado")
+                        .HasColumnType("tinyint");
 
                     b.Property<string>("NombreProducto")
                         .HasColumnType("nvarchar(max)");

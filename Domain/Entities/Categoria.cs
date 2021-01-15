@@ -7,6 +7,7 @@ namespace Domain.Entities
         public Guid CategoriaId { get; set; }
         public string NombreCategoria { get; set; }
         public string Descripcion { get; set; }
+        public byte Estado { get; set; }
 
         public ICollection<Producto> Productos { get; set; }
 

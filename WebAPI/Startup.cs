@@ -2,7 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Application.Categoria;
 using Domain.Entities;
+using FluentValidation.AspNetCore;
+using MediatR;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -17,6 +20,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Persistence;
 using Persistence.DapperConnection;
+using Persistence.DapperConnection.Categorias;
+using WebAPI.Middleware;
 
 namespace WebAPI
 {
@@ -38,10 +43,17 @@ namespace WebAPI
                 opt.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
             });
 
+
             // Para la conexion de los procedimientos alamcenados
             services.AddOptions();
             services.Configure<ConnectionSettings>(Configuration.GetSection("ConnectionStrings"));
 
+            // Agregar MediatR
+            services.AddMediatR(typeof(Get.Handler).Assembly);
+
+            // Conexion en la base de datos para trabajor con Procedimientos Almacenados
+            services.AddTransient<IFactoryConnection, FactoryConnection>();
+            services.AddScoped<ICategoriaRepository, CategoriaRepository>();
 
             // Agregando IdentityFrameworkCore a webAPI
             var builder = services.AddIdentityCore<Usuario>();
@@ -53,18 +65,22 @@ namespace WebAPI
             services.TryAddSingleton<ISystemClock, SystemClock>();
             
 
-            services.AddControllers();
+            services.AddControllers().AddFluentValidation(cfg => cfg.RegisterValidatorsFromAssemblyContaining<Post>());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            // Trabajar con nuestro propio manejador de Errores
+
+            app.UseMiddleware<MiddlewareErrorHandler>();
+
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
+                // app.UseDeveloperExceptionPage();
             }
 
-            app.UseHttpsRedirection();
+            // app.UseHttpsRedirection();
 
             app.UseRouting();
 

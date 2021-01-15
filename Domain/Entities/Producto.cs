@@ -13,7 +13,7 @@ namespace Domain.Entities
         
         [Column(TypeName = "decimal(18,2)")]
         public Decimal PrecioVenta { get; set; }
-        public int Estado { get; set; }
+        public byte Estado { get; set; }
         public Guid CategoriaId { get; set; }
 
         public ICollection<Combo> Combos { get; set; }

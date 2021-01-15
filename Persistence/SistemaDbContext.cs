@@ -25,6 +25,7 @@ namespace Persistence
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Venta> Ventas { get; set; }
         public DbSet<DetalleVenta> DetallesVentas { get; set; }
+        public DbSet<Categoria> Categorias { get; set; }
 
     }
 
