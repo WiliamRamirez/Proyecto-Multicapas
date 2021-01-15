@@ -16,6 +16,7 @@ using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Persistence;
+using Persistence.DapperConnection;
 
 namespace WebAPI
 {
@@ -36,6 +37,10 @@ namespace WebAPI
             {
                 opt.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
             });
+
+            // Para la conexion de los procedimientos alamcenados
+            services.AddOptions();
+            services.Configure<ConnectionSettings>(Configuration.GetSection("ConnectionStrings"));
 
 
             // Agregando IdentityFrameworkCore a webAPI
