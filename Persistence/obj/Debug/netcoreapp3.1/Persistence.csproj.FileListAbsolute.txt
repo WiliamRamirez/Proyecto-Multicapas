@@ -10,3 +10,6 @@
 /home/wiliam/Documentos/kardex/Persistence/obj/Debug/netcoreapp3.1/Persistence.csproj.CopyComplete
 /home/wiliam/Documentos/kardex/Persistence/obj/Debug/netcoreapp3.1/Persistence.dll
 /home/wiliam/Documentos/kardex/Persistence/obj/Debug/netcoreapp3.1/Persistence.pdb
+/home/wiliam/Documentos/kardex/Persistence/bin/Debug/netcoreapp3.1/Persistence.runtimeconfig.json
+/home/wiliam/Documentos/kardex/Persistence/bin/Debug/netcoreapp3.1/Persistence.runtimeconfig.dev.json
+/home/wiliam/Documentos/kardex/Persistence/obj/Debug/netcoreapp3.1/Persistence.genruntimeconfig.cache

@@ -7,3 +7,10 @@
 /home/wiliam/Documentos/kardex/Security/obj/Debug/netcoreapp3.1/Security.csproj.CoreCompileInputs.cache
 /home/wiliam/Documentos/kardex/Security/obj/Debug/netcoreapp3.1/Security.dll
 /home/wiliam/Documentos/kardex/Security/obj/Debug/netcoreapp3.1/Security.pdb
+/home/wiliam/Documentos/kardex/Security/bin/Debug/netcoreapp3.1/Application.dll
+/home/wiliam/Documentos/kardex/Security/bin/Debug/netcoreapp3.1/Domain.dll
+/home/wiliam/Documentos/kardex/Security/bin/Debug/netcoreapp3.1/Persistence.dll
+/home/wiliam/Documentos/kardex/Security/bin/Debug/netcoreapp3.1/Application.pdb
+/home/wiliam/Documentos/kardex/Security/bin/Debug/netcoreapp3.1/Domain.pdb
+/home/wiliam/Documentos/kardex/Security/bin/Debug/netcoreapp3.1/Persistence.pdb
+/home/wiliam/Documentos/kardex/Security/obj/Debug/netcoreapp3.1/Security.csproj.CopyComplete
