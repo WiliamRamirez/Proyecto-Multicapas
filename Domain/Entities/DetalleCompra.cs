@@ -19,6 +19,7 @@ namespace Domain.Entities
 
         public Guid CompraId { get; set; }
         public Guid ProductoId { get; set; }
+        public byte Estado { get; set; }
 
         //Link a la Tabla Compra y Producto
         public Compra Compra { get; set; }

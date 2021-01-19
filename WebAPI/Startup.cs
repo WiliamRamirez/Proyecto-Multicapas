@@ -24,6 +24,7 @@ using Persistence.DapperConnection;
 using Persistence.DapperConnection.Categorias;
 using Persistence.DapperConnection.Combos;
 using Persistence.DapperConnection.Productos;
+using Persistence.DapperConnection.Proveedores;
 using WebAPI.Middleware;
 
 namespace WebAPI
@@ -62,6 +63,7 @@ namespace WebAPI
             services.AddScoped<ICategoriaRepository, CategoriaRepository>();
             services.AddScoped<IProductoRepository, ProductoRepository>();
             services.AddScoped<IComboRepository, ComboRepository>();
+            services.AddScoped<IProveedorRepository, ProveedorRepository>();
 
             // Agregando IdentityFrameworkCore a webAPI
             var builder = services.AddIdentityCore<Usuario>();

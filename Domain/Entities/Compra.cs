@@ -20,6 +20,7 @@ namespace Domain.Entities
         [Column(TypeName = "decimal(18,2)")]
         public Decimal Descuento { get; set; }
         public Guid ProveedorId { get; set; }
+        public byte Estado { get; set; }
 
         // Link a la Tabla Proveedor
         public Proveedor Proveedor { get; set; }
