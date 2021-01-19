@@ -12,6 +12,7 @@ namespace Domain.Entities
         
         [Column(TypeName = "decimal(18,2)")]
         public Decimal PrecioCombo { get; set; }
+        public byte Estado { get; set; }
         public Guid ProductoId { get; set; }
 
         public Producto Producto { get; set; }

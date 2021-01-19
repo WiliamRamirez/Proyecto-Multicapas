@@ -83,6 +83,9 @@ namespace Persistence.Migrations
                     b.Property<int>("Cantidad")
                         .HasColumnType("int");
 
+                    b.Property<byte>("Estado")
+                        .HasColumnType("tinyint");
+
                     b.Property<string>("NombreCombo")
                         .HasColumnType("nvarchar(max)");
 

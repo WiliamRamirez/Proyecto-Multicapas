@@ -2,7 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Application.Categoria;
+using Application.Producto;
+using AutoMapper;
 using Domain.Entities;
 using FluentValidation.AspNetCore;
 using MediatR;
@@ -21,6 +22,8 @@ using Microsoft.Extensions.Logging;
 using Persistence;
 using Persistence.DapperConnection;
 using Persistence.DapperConnection.Categorias;
+using Persistence.DapperConnection.Combos;
+using Persistence.DapperConnection.Productos;
 using WebAPI.Middleware;
 
 namespace WebAPI
@@ -43,6 +46,9 @@ namespace WebAPI
                 opt.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
             });
 
+            // Automapper
+            services.AddAutoMapper(typeof(Get.Handler));
+
 
             // Para la conexion de los procedimientos alamcenados
             services.AddOptions();
@@ -54,6 +60,8 @@ namespace WebAPI
             // Conexion en la base de datos para trabajor con Procedimientos Almacenados
             services.AddTransient<IFactoryConnection, FactoryConnection>();
             services.AddScoped<ICategoriaRepository, CategoriaRepository>();
+            services.AddScoped<IProductoRepository, ProductoRepository>();
+            services.AddScoped<IComboRepository, ComboRepository>();
 
             // Agregando IdentityFrameworkCore a webAPI
             var builder = services.AddIdentityCore<Usuario>();
