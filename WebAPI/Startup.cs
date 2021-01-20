@@ -108,7 +108,13 @@ namespace WebAPI
             services.AddScoped<IUserSession, UserSession>();
             
 
-            services.AddControllers().AddFluentValidation(cfg => cfg.RegisterValidatorsFromAssemblyContaining<Post>());
+            services.AddControllers(opt =>
+            {
+                // Para agregar authorize a todos los controllers
+                var policy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
+                opt.Filters.Add(new AuthorizeFilter(policy));
+                
+            }).AddFluentValidation(cfg => cfg.RegisterValidatorsFromAssemblyContaining<Post>());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
