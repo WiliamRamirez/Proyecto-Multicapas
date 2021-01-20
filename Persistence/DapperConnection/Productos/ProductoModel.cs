@@ -12,5 +12,6 @@ namespace Persistence.DapperConnection.Productos
         public byte Estado { get; set; }
         public Guid CategoriaId { get; set; }
         public string NombreCategoria { get; set; }
+
     }
 }
