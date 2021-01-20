@@ -33,7 +33,7 @@ namespace WebAPI
                     context.Database.Migrate();
 
 
-                    // DataPrueba.InsertarData(context, userManager).Wait(); // Wait() -> para hacerlo asincrono
+                    DataAdmin.InsertData(context, userManager).Wait(); // Wait() -> para hacerlo asincrono
                 }
                 catch (Exception e)
                 {

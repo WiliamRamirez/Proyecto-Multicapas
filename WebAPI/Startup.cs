@@ -1,24 +1,36 @@
+using System.Collections.Immutable;
+using System.Text;
+using System.Reflection.PortableExecutable;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Application.Producto;
-using AutoMapper;
-using Domain.Entities;
 using FluentValidation.AspNetCore;
 using MediatR;
-using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.DependencyInjection.Extensions;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc.Authorization;
+using Microsoft.OpenApi.Models;
+using AutoMapper;
+
+// Exportar las dependencias correctas
+
+using Application.Contracts;
+using Application.Producto;
+using Domain.Entities;
 using Persistence;
 using Persistence.DapperConnection;
 using Persistence.DapperConnection.Categorias;
@@ -27,6 +39,7 @@ using Persistence.DapperConnection.Compras;
 using Persistence.DapperConnection.DetallesCompras;
 using Persistence.DapperConnection.Productos;
 using Persistence.DapperConnection.Proveedores;
+using Security;
 using WebAPI.Middleware;
 
 namespace WebAPI
@@ -77,6 +90,22 @@ namespace WebAPI
             identityBuilder.AddEntityFrameworkStores<SistemaDbContext>();
             identityBuilder.AddSignInManager<SignInManager<Usuario>>();
             services.TryAddSingleton<ISystemClock, SystemClock>();
+
+            // Json WebToken
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("Mi palabra secreta"));
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(opt =>
+            {
+                opt.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = key,
+                    ValidateAudience = false,
+                    ValidateIssuer = false
+                };
+            });
+
+            services.AddScoped<IJwtGenerator, JwtGenerator>();
+            services.AddScoped<IUserSession, UserSession>();
             
 
             services.AddControllers().AddFluentValidation(cfg => cfg.RegisterValidatorsFromAssemblyContaining<Post>());
@@ -95,6 +124,7 @@ namespace WebAPI
             }
 
             // app.UseHttpsRedirection();
+            app.UseAuthentication();
 
             app.UseRouting();
 
