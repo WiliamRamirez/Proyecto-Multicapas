@@ -1,5 +1,6 @@
 using Application.DTOs;
 using AutoMapper;
+using Domain.Entities;
 using Persistence.DapperConnection.Combos;
 using Persistence.DapperConnection.Compras;
 using Persistence.DapperConnection.DetallesCompras;
@@ -16,6 +17,7 @@ namespace Application
             
             CreateMap<CompraModel,CompraDTO>().ReverseMap();
             CreateMap<DetalleCompraModel,DetalleCompraDTO>().ReverseMap();
+            CreateMap<Usuario,UsuarioDTO>();
         }
     }
 }

@@ -11,7 +11,7 @@ namespace Persistence
         {
             if (!userManager.Users.Any())
             {
-                var usuario = new Usuario { NombreCompleto = "admin", UserName = "admin", Email = "admin@admin" };
+                var usuario = new Usuario { NombreCompleto = "admin", UserName = "admin", Email = "admin", Estado = 1, isAdmin = 1};
                 await userManager.CreateAsync(usuario, "Password1234$");
             }
         }

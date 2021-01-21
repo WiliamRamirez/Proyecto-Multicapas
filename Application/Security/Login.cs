@@ -11,6 +11,7 @@ using MediatR;
 using Microsoft.AspNetCore.Identity;
 using Persistence;
 using FluentValidation;
+using System;
 
 namespace Application.Security
 {
@@ -65,6 +66,7 @@ namespace Application.Security
                 {
                     return new UserDTO
                     {
+                        Id = new Guid(user.Id),
                         NombreCompleto = user.NombreCompleto,
                         Token = _jwtGenerator.CreateToken(user, listRoles),
                         Username = user.UserName,

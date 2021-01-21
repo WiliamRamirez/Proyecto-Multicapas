@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
@@ -41,6 +42,7 @@ namespace Application.Security
 
                 return new UserDTO
                 {
+                    Id = new Guid(user.Id),
                     NombreCompleto = user.NombreCompleto,
                     Username = user.UserName,
                     Token = _jwtGenerador.CreateToken(user, listRoles),
